@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Signin.css";
+import "./SignIn.css";
 import ShowEye from "../../components/ShowEye/ShowEye";
 import { useForm } from "react-hook-form";
 import Spinner from "../../utils/spinner";
