@@ -5,7 +5,7 @@ import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import ShowEye from "../../components/ShowEye/ShowEye";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
-import Spinner from "../../utils/spinner";
+import Spinner from "../../utils/Spinner";
 
 const SignUp = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -18,7 +18,7 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
 
-  const btnText = authenticating ? <Spinner/>: "Login to your account";
+  const btnText = authenticating ? <Spinner /> : "Login to your account";
 
   const onSubmit = (data) => {
     handleRegisterUser(data);
