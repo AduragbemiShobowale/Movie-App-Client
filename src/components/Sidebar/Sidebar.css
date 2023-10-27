@@ -26,27 +26,26 @@
   transition: ease-in-out;
 }
 
-
-[title] {
-  position: relative; 
-  cursor: pointer; 
+title {
+  position: relative;
+  cursor: pointer;
 }
 
-[title]::before {
-  content: attr(title); 
-  position: absolute; 
-  bottom: 100%; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  background-color: #333; 
-  color: #fff; 
-  padding: 5px 10px; 
-  border-radius: 5px; 
-  font-size: 14px; 
-  z-index: 1; 
-  display: none; 
+title::before {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 1;
+  display: none;
 }
 
-[title]:hover::before {
-  display: block; 
+title:hover::before {
+  display: block;
 }
