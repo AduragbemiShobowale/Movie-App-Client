@@ -30,14 +30,14 @@ const Sidebar = () => {
     <div className="sidebar d-flex flex-xl-column justify-content-between justify-content-xl-start gap-xl-5 px-4 py-4 custom-bg-light-grey mx-md-4">
       <Link to="/">
         {" "}
-        <MdMovie className="fs-1 custom-text-red" />
+        <MdMovie className="fs-1 custom-text-red" title="Homepage" />
       </Link>
       <div className="d-flex flex-xl-column gap-3 gap-md-4">
         <Link to="/">
           <MdSpaceDashboard
             className={`fs-1 ${
               selected === "/" ? "text-white" : "text-secondary"
-            }`}
+            }`} title="Homepage"
           />
         </Link>
         <Link to="/movies">
@@ -45,7 +45,7 @@ const Sidebar = () => {
           <RiFilmFill
             className={`fs-1 ${
               selected === "/movies" ? "text-white" : "text-secondary"
-            }`}
+            }`} title="Movies"
           />
         </Link>
         <Link to="/tvseries">
@@ -53,7 +53,7 @@ const Sidebar = () => {
           <PiTelevisionFill
             className={`fs-1 ${
               selected === "/tvseries" ? "text-white" : "text-secondary"
-            }`}
+            }`} title="TV Series"
           />
         </Link>
         <Link to="/bookmark">
@@ -61,7 +61,7 @@ const Sidebar = () => {
           <BsFillBookmarkFill
             className={`fs-1 ${
               selected === "/bookmark" ? "text-white" : "text-secondary"
-            }`}
+            }`} title="Bookmark"
           />
         </Link>
       </div>
