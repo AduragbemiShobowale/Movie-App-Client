@@ -37,6 +37,7 @@ const Sidebar = () => {
             className={`fs-1 ${
               selected === "/" ? "text-white" : "text-secondary"
             }`}
+            title="Homepage"
           />
         </Link>
         <Link to="/movies">
@@ -45,6 +46,7 @@ const Sidebar = () => {
             className={`fs-1 ${
               selected === "/movies" ? "text-white" : "text-secondary"
             }`}
+            title="Movies"
           />
         </Link>
         <Link to="/tvseries">
@@ -53,6 +55,7 @@ const Sidebar = () => {
             className={`fs-1 ${
               selected === "/tvseries" ? "text-white" : "text-secondary"
             }`}
+            title="TV Series"
           />
         </Link>
         <Link to="/bookmark">
@@ -61,11 +64,12 @@ const Sidebar = () => {
             className={`fs-1 ${
               selected === "/bookmark" ? "text-white" : "text-secondary"
             }`}
+            title="Bookmark"
           />
         </Link>
       </div>
       <div className="mt-xl-auto position-relative ">
-        <img 
+        <img
           onClick={() => {
             setToggleDropdown(!toggleDropdown);
           }}
