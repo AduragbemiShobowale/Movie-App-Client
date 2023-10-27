@@ -26,15 +26,6 @@ const Sidebar = () => {
     }
   }, [location]);
 
-  const [tooltip, setTooltip] = useState("");
-
-  const handleIconHover = (name) => {
-    setTooltip(name);
-  };
-
-  const handleIconLeave = () => {
-    setTooltip("");
-  };
   return (
     <div className="sidebar d-flex flex-xl-column justify-content-between justify-content-xl-start gap-xl-5 px-4 py-4 custom-bg-light-grey mx-md-4">
       <Link to="/">
@@ -47,8 +38,6 @@ const Sidebar = () => {
             className={`fs-1 ${
               selected === "/" ? "text-white" : "text-secondary"
             }`}
-            onMouseEnter={() => handleIconHover("Movies")}
-            onMouseLeave={handleIconLeave}
           />
         </Link>
         <Link to="/movies">
