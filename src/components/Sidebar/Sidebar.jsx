@@ -25,6 +25,16 @@ const Sidebar = () => {
       setSelected("/bookmark");
     }
   }, [location]);
+
+  const [tooltip, setTooltip] = useState("");
+
+  const handleIconHover = (name) => {
+    setTooltip(name);
+  };
+
+  const handleIconLeave = () => {
+    setTooltip("");
+  };
   return (
     <div className="sidebar d-flex flex-xl-column justify-content-between justify-content-xl-start gap-xl-5 px-4 py-4 custom-bg-light-grey mx-md-4">
       <Link to="/">
@@ -37,7 +47,8 @@ const Sidebar = () => {
             className={`fs-1 ${
               selected === "/" ? "text-white" : "text-secondary"
             }`}
-            title="Homepage"
+            onMouseEnter={() => handleIconHover("Movies")}
+            onMouseLeave={handleIconLeave}
           />
         </Link>
         <Link to="/movies">
@@ -46,7 +57,6 @@ const Sidebar = () => {
             className={`fs-1 ${
               selected === "/movies" ? "text-white" : "text-secondary"
             }`}
-            title="Movies"
           />
         </Link>
         <Link to="/tvseries">
@@ -55,7 +65,6 @@ const Sidebar = () => {
             className={`fs-1 ${
               selected === "/tvseries" ? "text-white" : "text-secondary"
             }`}
-            title="TV Series"
           />
         </Link>
         <Link to="/bookmark">
@@ -64,7 +73,6 @@ const Sidebar = () => {
             className={`fs-1 ${
               selected === "/bookmark" ? "text-white" : "text-secondary"
             }`}
-            title="Bookmark"
           />
         </Link>
       </div>
